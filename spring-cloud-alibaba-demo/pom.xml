@@ -5,6 +5,7 @@
     <groupId>com.zhuge</groupId>
     <artifactId>spring-cloud-alibaba-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <modules>
         <module>wms-service</module>
