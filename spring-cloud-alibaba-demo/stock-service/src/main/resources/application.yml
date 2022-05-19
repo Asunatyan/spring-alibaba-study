@@ -1,0 +1,18 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: stock-service
+
+  cloud:
+    nacos:
+      discovery:
+        # 指定nacos server的地址
+        server-addr: localhost:8848
+        # 指定集群名称
+        cluster-name: nj
+        metadata:
+          version: v3
+        #ephemeral: false
+        namespace: dev
+
