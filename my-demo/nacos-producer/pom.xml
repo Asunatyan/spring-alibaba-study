@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-cloud-nacos-study</artifactId>
+    <artifactId>nacos-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>nacos-producer</name>
     <description>nacos-producer</description>
