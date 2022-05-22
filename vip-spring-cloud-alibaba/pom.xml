@@ -28,6 +28,8 @@
         <module>mall-user-feign-demo</module>
         <module>mall-feign-api</module>
         <module>spring-cloud-alibaba-dubbo-demo</module>
+        <module>nacos-spring-boot-config-example</module>
+        <module>nacos-config</module>
     </modules>
 
     <properties>
