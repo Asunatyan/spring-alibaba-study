@@ -1133,7 +1133,7 @@ public class ServiceManager implements RecordListener<Service> {
                         if (server.getAddress().equals(NetUtils.localServer())) {
                             continue;
                         }
-                        synchronizer.send(server.getAddress(), msg);
+                        synchronizer.send(server.getAddress(), msg);//给其他集群机器发送心跳
                     }
                 }
             } catch (Exception e) {
