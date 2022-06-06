@@ -26,11 +26,11 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     
-        <!-- LoadBalancer -->
-        <dependency>
+        <!-- LoadBalancer 去掉这个要不然ribbon就不生效了-->
+<!--        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </dependency>
+        </dependency>-->
     
         <!--添加ribbon的依赖-->
         <!--<dependency>-->
