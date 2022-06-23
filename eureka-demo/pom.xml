@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>tmp.winto</groupId>
+  <artifactId>gitRepoInner</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+
+	
+  <name>gitRepoInner</name>
+  <url>http://maven.apache.org</url>
+
+  <modules>
+    <module>eureka-01-server-8000</module>
+    <module>eureka-02-provider-8081</module>
+    <module>eureka-03-consumer-8080</module>
+    <module>eureka-03-consumer-feign-8080</module>
+   <!-- <module>wingto-opercenter</module>-->
+  </modules>
+
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!--<javamelody-core.version>1.59.0</javamelody-core.version>-->
+  </properties>
+
+</project>
