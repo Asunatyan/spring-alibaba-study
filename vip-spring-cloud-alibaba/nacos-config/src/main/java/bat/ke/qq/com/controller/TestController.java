@@ -16,6 +16,7 @@ public class TestController {
 
     @GetMapping("/common")
     public String hello() {
+        System.out.println(this);
         return name+","+age;
     }
 
