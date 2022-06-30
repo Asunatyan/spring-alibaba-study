@@ -14,9 +14,9 @@ spring:
         metadata:
           version: v2
     # 不使用ribbon
-    loadbalancer:
-      ribbon:
-        enabled: false
+#    loadbalancer:
+#      ribbon:
+#        enabled: false
 
 
 # 被调用的微服务名  当需要使用局部配置的时候推荐使用这种方式
@@ -27,12 +27,13 @@ spring:
   # 自定义的负载均衡策略（基于随机&权重）
     #NFLoadBalancerRuleClassName: com.tuling.mall.ribbondemo.rule.NacosRandomWithWeightRule
 
-ribbon:
-  eager-load:
-    # 开启ribbon饥饿加载
-    enabled: true
-    # 配置mall-user使用ribbon饥饿加载，多个使用逗号分隔
-    clients: mall-order
+#ribbon:
+#  eager-load:
+#    # 开启ribbon饥饿加载
+#    enabled: true
+#    # 配置mall-user使用ribbon饥饿加载，多个使用逗号分隔
+#    clients: mall-order
+
 
 
 
