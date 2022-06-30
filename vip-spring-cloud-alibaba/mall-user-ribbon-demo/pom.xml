@@ -24,6 +24,7 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <exclusions></exclusions>
         </dependency>
     
         <!-- LoadBalancer 去掉这个要不然ribbon就不生效了-->
