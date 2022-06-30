@@ -1,0 +1,36 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: mall-user-sentinel-ribbon-demo  #微服务名称
+
+  #配置nacos注册中心地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    sentinel:
+      transport:
+        # 添加sentinel的控制台地址
+        dashboard: 127.0.0.1:8080
+        # 指定应用与Sentinel控制台交互的端口，应用本地会起一个该端口占用的HttpServer
+        #port: 8719
+
+
+#暴露actuator端点   http://localhost:8800/actuator/sentinel
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+#true开启sentinel对resttemplate的支持，false则关闭  默认true
+resttemplate:
+  sentinel:
+    enabled: true
+
+feign:
+  sentinel:
+    enabled: true   #开启sentinel对feign的支持 默认false
