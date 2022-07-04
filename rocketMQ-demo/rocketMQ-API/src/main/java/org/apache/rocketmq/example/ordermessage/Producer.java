@@ -46,12 +46,17 @@ public class Producer {
                                     ("order_"+orderId+" step " + j).getBytes(RemotingHelper.DEFAULT_CHARSET));
                     SendResult sendResult = producer.send(msg, new MessageQueueSelector() {
                         @Override
-                        public MessageQueue select(List<MessageQueue> mqs, Message msg, Object arg) {
+                        public MessageQueue select(
+                                List<MessageQueue> mqs,//所有的massageQueue
+                                Message msg,//要发送的消息
+                                Object arg//业务参数,也就是下面的 orderId
+                        ) {
+                            //保证同一条orderId存到同一个queue里面
                             Integer id = (Integer) arg;
                             int index = id % mqs.size();
                             return mqs.get(index);
                         }
-                    }, orderId);
+                    }, orderId);//这个参数
 
                     System.out.printf("%s%n", sendResult);
                 }

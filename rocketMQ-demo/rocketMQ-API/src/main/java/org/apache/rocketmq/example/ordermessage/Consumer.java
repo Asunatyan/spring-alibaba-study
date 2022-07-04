@@ -38,6 +38,8 @@ public class Consumer {
 
         consumer.subscribe("OrderTopicTest", "*");
 
+        //一个一个messageQueue取消息,而不是混多个messageQueue取
+        //MessageListenerOrderly 对象用于有序接收消息。一个线程一个队列,所有是这个messageQueue拿完拿下一个?
         consumer.registerMessageListener(new MessageListenerOrderly() {
             @Override
             public ConsumeOrderlyStatus consumeMessage(List<MessageExt> msgs, ConsumeOrderlyContext context) {
