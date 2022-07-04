@@ -23,6 +23,9 @@ import org.apache.rocketmq.common.message.Message;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 批量发送,多条消息一次性发送
+ */
 public class SimpleBatchProducer {
 
     public static void main(String[] args) throws Exception {
@@ -37,7 +40,7 @@ public class SimpleBatchProducer {
         messages.add(new Message(topic, "Tag", "OrderID002", "Hello world 1".getBytes()));
         messages.add(new Message(topic, "Tag", "OrderID003", "Hello world 2".getBytes()));
 
-        producer.send(messages);
+        producer.send(messages);//消息超了怎么办,看下一个demo
         producer.shutdown();
     }
 }
