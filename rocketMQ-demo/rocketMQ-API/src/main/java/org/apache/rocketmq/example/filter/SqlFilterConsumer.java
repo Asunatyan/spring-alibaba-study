@@ -35,7 +35,7 @@ public class SqlFilterConsumer {
         // Don't forget to set enablePropertyFilter=true in broker
         consumer.subscribe("SqlFilterTest",
             MessageSelector.bySql("(TAGS is not null and TAGS in ('TagA', 'TagB'))" +
-                "and (a is not null and a between 0 and 3)"));
+                "and (a is not null and a between 0 and 3)"));//条件都是在broker里面判断的,不是在消费者判断的减少io
 
         consumer.registerMessageListener(new MessageListenerConcurrently() {
 

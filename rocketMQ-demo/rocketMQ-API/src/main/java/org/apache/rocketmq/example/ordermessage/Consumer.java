@@ -40,6 +40,7 @@ public class Consumer {
 
         //一个一个messageQueue取消息,而不是混多个messageQueue取
         //MessageListenerOrderly 对象用于有序接收消息。一个线程一个队列,所有是这个messageQueue拿完拿下一个?
+        //一个消费者没有问题,但是多个消费者,就不能保证消息处理的快慢导致消息在多个消费者之间的顺序了
         consumer.registerMessageListener(new MessageListenerOrderly() {
             @Override
             public ConsumeOrderlyStatus consumeMessage(List<MessageExt> msgs, ConsumeOrderlyContext context) {

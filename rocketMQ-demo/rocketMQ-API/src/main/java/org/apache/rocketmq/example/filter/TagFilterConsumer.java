@@ -26,13 +26,17 @@ import org.apache.rocketmq.common.message.MessageExt;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * 消息过滤
+ */
 public class TagFilterConsumer {
 
     public static void main(String[] args) throws InterruptedException, MQClientException, IOException {
 
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("please_rename_unique_group_name");
 
-        consumer.subscribe("TagFilterTest", "TagA || TagC");
+        //只接受A和C的消息
+        consumer.subscribe("TagFilterTest", "TagA || TagC");//条件都是在broker里面判断的,不是在消费者判断的减少io
 
         consumer.registerMessageListener(new MessageListenerConcurrently() {
 
