@@ -26,11 +26,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * 顺序消费
+ */
 public class Consumer {
 
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("please_rename_unique_group_name_3");
-        consumer.setNamesrvAddr("192.168.232.128:9876");
+        consumer.setNamesrvAddr("172.16.1.103:9876;172.16.1.102:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
 
         consumer.subscribe("OrderTopicTest", "*");

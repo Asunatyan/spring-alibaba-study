@@ -26,11 +26,14 @@ import org.apache.rocketmq.common.message.MessageExt;
 
 import java.util.List;
 
+/**
+ * push 模式,broke主动吧消息推送过来
+ */
 public class PushConsumer {
 
     public static void main(String[] args) throws InterruptedException, MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("CID_JODIE_1");
-//        consumer.setNamesrvAddr("192.168.232.128:9876");
+//        consumer.setNamesrvAddr("172.16.1.103:9876;172.16.1.102:9876");
         consumer.subscribe("TopicTest", "*");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         //wrong time format 2017_0422_221800

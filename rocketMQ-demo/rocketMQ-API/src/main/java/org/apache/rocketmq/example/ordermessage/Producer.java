@@ -34,7 +34,7 @@ public class Producer {
     public static void main(String[] args) throws UnsupportedEncodingException {
         try {
             DefaultMQProducer producer = new DefaultMQProducer("please_rename_unique_group_name");
-//            producer.setNamesrvAddr("192.168.232.128:9876");
+//            producer.setNamesrvAddr("172.16.1.103:9876;172.16.1.102:9876");
             producer.start();
 
             for (int i = 0; i < 10; i++) {

@@ -49,7 +49,7 @@ public class Consumer {
          * }
          * </pre>
          */
-        consumer.setNamesrvAddr("192.168.232.128:9876");
+        consumer.setNamesrvAddr("172.16.1.103:9876;172.16.1.102:9876");
         /*
          * Specify where to start in case the specified consumer group is a brand new one.
          */
